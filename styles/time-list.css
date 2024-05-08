@@ -1,0 +1,11 @@
+.time-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px var(--padding-basic);
+  margin-bottom: 1rem;
+}
+
+.date-title {
+  margin-bottom: 0.4rem;
+  font-size: calc(1.325rem + 0.2vw);
+}
