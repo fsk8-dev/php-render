@@ -10,7 +10,6 @@ require 'connection/get_schedule.php';
     $request_uri = '/main';
   }
   $requested_file = rtrim($_SERVER['DOCUMENT_ROOT'], '/') . '/pages' . $request_uri . '.' . 'php';
-
 ?>
 
 <!DOCTYPE html>
@@ -22,10 +21,10 @@ require 'connection/get_schedule.php';
     <link rel="stylesheet" href="./styles/var.css" />
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/bootstrap-reboot.css"/>
-    <link rel="stylesheet" href="./styles/common.css" />
+    <link rel="stylesheet" href="./styles/common.css?version=63" />
     <link rel="stylesheet" href="./styles/btn.css" />
     <link rel="stylesheet" href="./styles/burger.css" />
-    <link rel="stylesheet" href="./styles/navigation.css" />
+    <link rel="stylesheet" href="./styles/navigation.css?version=4" />
     <link rel="stylesheet" href="./styles/time-list.css" />
 
     <script defer src="./js/navigation.js" ></script>
@@ -33,8 +32,6 @@ require 'connection/get_schedule.php';
     <title>Расписание катков</title>
   </head>
   <body id="body">
-
-
     <div class="container">
       <div class="overlay" id="overlay"></div>
       <div class="grid">

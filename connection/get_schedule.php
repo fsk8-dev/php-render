@@ -1,8 +1,8 @@
 <?php
-$host = 'localhost';
-$dbname = 'postgres';
-$username = 'postgres';
-$password = 'dbpassword';
+$host = getenv('SCHEDULE_HOST');
+$dbname = getenv(('SCHEDULE_DBNAME'));
+$username = getenv('SCHEDULE_USERNAME');
+$password = getenv('SCHEDULE_PASSWORD');
 
 
 try {
@@ -14,11 +14,11 @@ try {
 }
 
 function fetchData($host, $dbname, $username, $password) {
-  $pdo = new PDO("pgsql:host=$host;dbname=$dbname;", $username, $password);
+  $pdo = new PDO("mysql:host=$host;dbname=$dbname;", $username, $password);
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   $sql = "
-    select distinct on(c.arena_id) l.name, c.json_schedule
-    from currentschedule c
+    select distinct c.arena_id, l.name, c.json_schedule
+    from CurrentSchedule c
       join Arena a on c.arena_id = a.arena_id
       join Location l on a.location_id = l.location_id
     where c.sporttype_id = 1

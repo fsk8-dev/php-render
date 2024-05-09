@@ -29,6 +29,13 @@ body {
   max-width: var(--medium-screen);
   min-height: 100vh;
   overflow: hidden;
+  box-shadow: 0 0 5px 5px var(--color-primary-light);
+}
+
+@media (min-width: var(--medium-screen)) {
+  .container {
+    box-shadow: none;
+  }
 }
 
 .grid {

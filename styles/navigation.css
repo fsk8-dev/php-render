@@ -56,11 +56,14 @@
   min-width: 250px;
   height: 100vh;
 
-  background-color: #fff;
+  /* background-color: #fff; */
+  background-color: #eaeaea;
+
   overflow-y: auto;
   visibility: hidden;
   transform: translateX(-120%);
-  transition: visibility 0.3s ease, transform 0.3s ease;
+  transition: transform 0.3s ease;
+
   z-index: -1100;
 }
 
@@ -88,16 +91,19 @@
   outline: none;
 
   text-decoration: none;
-  outline: none;
+  outline: 1px solid transparent;
+  transition: outline 0.3s ease;
 }
 
 .nav__link:focus-visible {
-  color: greenyellow;
+  outline: 1px solid var(--color-primary);
+  outline-offset: 3px;
 }
 
 .nav__link:hover {
   color: var(--color-primary);
   background-color: inherit;
+  outline: 1px solid transparent;
 }
 
 .nav__link:active {
