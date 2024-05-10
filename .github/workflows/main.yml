@@ -18,6 +18,7 @@ jobs:
           host: ${{ secrets.DESTINATION_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 49439
           rm: true
           source: "index.php,connection/*,include/*,js/*,pages/*,styles/*"
           target: "/home/fsk8-schedule/php-render"        
