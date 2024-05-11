@@ -1,8 +1,9 @@
 <?php
-$host = getenv('SCHEDULE_HOST');
-$dbname = getenv(('SCHEDULE_DBNAME'));
-$username = getenv('SCHEDULE_USERNAME');
-$password = getenv('SCHEDULE_PASSWORD');
+include 'secret/config.php';
+$host = $SCHEDULE_HOST;
+$dbname = $SCHEDULE_DBNAME;
+$username = $SCHEDULE_USERNAME;
+$password = $SCHEDULE_PASSWORD;
 
 
 try {
