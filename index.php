@@ -18,14 +18,14 @@ require 'connection/get_schedule.php';
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="./styles/var.css" />
-    <link rel="stylesheet" href="./styles/reset.css" />
-    <link rel="stylesheet" href="./styles/bootstrap-reboot.css"/>
-    <link rel="stylesheet" href="./styles/common.css?version=63" />
-    <link rel="stylesheet" href="./styles/btn.css" />
-    <link rel="stylesheet" href="./styles/burger.css" />
-    <link rel="stylesheet" href="./styles/navigation.css?version=4" />
-    <link rel="stylesheet" href="./styles/time-list.css" />
+    <link rel="stylesheet" href="/styles/var.css" />
+    <link rel="stylesheet" href="/styles/reset.css" />
+    <link rel="stylesheet" href="/styles/bootstrap-reboot.css"/>
+    <link rel="stylesheet" href="/styles/common.css?version=63" />
+    <link rel="stylesheet" href="/styles/btn.css" />
+    <link rel="stylesheet" href="/styles/burger.css" />
+    <link rel="stylesheet" href="/styles/navigation.css?version=4" />
+    <link rel="stylesheet" href="/styles/time-list.css" />
 
     <script defer src="./js/navigation.js" ></script>
 
