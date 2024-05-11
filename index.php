@@ -22,7 +22,6 @@ require 'connection/get_schedule.php';
     <link rel="stylesheet" href="/styles/reset.css" />
     <link rel="stylesheet" href="/styles/bootstrap-reboot.css"/>
     <link rel="stylesheet" href="/styles/common.css?version=63" />
-    <link rel="stylesheet" href="/styles/btn.css" />
     <link rel="stylesheet" href="/styles/burger.css" />
     <link rel="stylesheet" href="/styles/navigation.css?version=4" />
     <link rel="stylesheet" href="/styles/time-list.css" />
