@@ -1,22 +1,22 @@
-name: Deploy prod
+name: Deploy via FTP
 
 on:
-  workflow_dispatch:
   push:
     branches:
-      - "main"
+      - main
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v2
-        
-      - name: Copy files to serve
-        uses: appleboy/scp-action@v0.1.7
+
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@4.1
         with:
-          host: ${{ secrets.DESTINATION_HOST }}
-          username: ${{ secrets.SSH_USERNAME }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: "index.php,connection/*,include/*,js/*,pages/*,styles/*"
-          target: "/home/fsk8-schedule/php-render"        
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./index.php
+          remote-dir: /domains/schedule.fsk8.ru/php-render
