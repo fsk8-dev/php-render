@@ -25,6 +25,7 @@ jobs:
             **/node_modules/**
             **/.github/**
             **/.vscode/**
+            **/.editorconfig**            
                
           
           
