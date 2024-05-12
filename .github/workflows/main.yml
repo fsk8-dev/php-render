@@ -22,6 +22,7 @@ jobs:
           exclude: |
             **/.git*
             **/.git*/**
+            **/.gitignore**            
             **/node_modules/**
             **/.github/**
             **/.vscode/**
