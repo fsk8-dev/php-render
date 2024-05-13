@@ -25,6 +25,7 @@ require 'connection/get_schedule.php';
     <link rel="stylesheet" href="/styles/burger.css" />
     <link rel="stylesheet" href="/styles/navigation.css?version=4" />
     <link rel="stylesheet" href="/styles/time-list.css" />
+    <link rel="stylesheet" href="/styles/components/hero.css" />
 
     <script defer src="./js/navigation.js" ></script>
 

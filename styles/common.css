@@ -4,6 +4,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #333;
 }
 
 #body.modal-opened {
@@ -61,6 +62,10 @@ body {
   color: #fff;
 }
 
+.img {
+  max-width: 100%;
+}
+
 .btn {
   margin: 0;
   padding: 0;
@@ -69,6 +74,10 @@ body {
   background-color: transparent;
   outline: none;
   cursor: pointer;
+}
+
+.no-break-text {
+  white-space: nowrap;
 }
 
 .red {
