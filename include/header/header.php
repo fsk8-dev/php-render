@@ -45,6 +45,11 @@
            Гранд Каньон
          </a>
        </li>
+       <li class="nav__item">
+         <a href="stachek_iceberg" class="nav__link">
+           Айсберг
+         </a>
+       </li>
      </ul> <!-- nav__items -->
    </div>
   </nav>
