@@ -46,7 +46,7 @@
          </a>
        </li>
        <li class="nav__item">
-         <a href="stachek_iceberg" class="nav__link">
+         <a href="iceberg" class="nav__link">
            Айсберг
          </a>
        </li>
