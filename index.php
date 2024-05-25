@@ -17,6 +17,20 @@ require 'connection/get_schedule.php';
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+
+    <meta property="og:title" content="ЛедоГраф" />
+    <meta
+      property="og:description"
+      content="Расписание всех массовых катаний на одном сайте"
+    />
+    <meta
+      property="og:image"
+      content="/img/socials.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="og:site_name" content="ЛедоГраф - ваш проводник в мире ледовых приключений" />
+    <meta property="og:url" content="https://lingvocards.space" />
 
     <link rel="stylesheet" href="/styles/var.css" />
     <link rel="stylesheet" href="/styles/reset.css" />
