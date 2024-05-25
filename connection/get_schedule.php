@@ -18,12 +18,32 @@ function fetchData($host, $dbname, $username, $password) {
   $pdo = new PDO("mysql:host=$host;dbname=$dbname;", $username, $password);
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   $sql = "
-    select distinct c.arena_id, l.name, c.json_schedule
-    from CurrentSchedule c
-      join Arena a on c.arena_id = a.arena_id
-      join Location l on a.location_id = l.location_id
-    where c.sporttype_id = 1
-    order by c.arena_id, c.currentschedule_id desc;
+    SELECT
+      arena_id,
+      name,
+      json_schedule
+    FROM
+      (
+      SELECT
+          c.arena_id,
+          l.name,
+          c.json_schedule,
+          ROW_NUMBER() OVER (PARTITION BY c.arena_id
+      ORDER BY
+          c.currentschedule_id DESC) AS ROW_NUMBER
+      FROM
+          CurrentSchedule c
+      JOIN Arena a ON
+          c.arena_id = a.arena_id
+      JOIN Location l ON
+          a.location_id = l.location_id
+      WHERE
+          c.sporttype_id = 1
+      ORDER BY
+          c.arena_id
+    ) subquery
+    WHERE
+      ROW_NUMBER = 1;
   ";
 
   $statement = $pdo->prepare($sql);
