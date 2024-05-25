@@ -50,6 +50,22 @@
            Айсберг
          </a>
        </li>
+
+       <li class="nav__item">
+         <a href="arena-ice-2" class="nav__link">
+          Арена Лед 2
+         </a>
+       </li>
+       <li class="nav__item">
+         <a href="arena-ice-3" class="nav__link">
+          Арена Лед 3
+         </a>
+       </li>
+       <li class="nav__item">
+         <a href="arena-ice-4" class="nav__link">
+          Арена Лед 4
+         </a>
+       </li>
      </ul> <!-- nav__items -->
    </div>
   </nav>
