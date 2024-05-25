@@ -14,10 +14,9 @@
   $weekDays = ['', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']
 ?>
 
-<?php if(!is_null($arenaSchedule)): ?>
+<?php if(!is_null($arenaSchedule) && count($arenaSchedule->scheduleList) > 0): ?>
 
   <h1><?= $arenaSchedule->arenaName ?></h1>
-
   <?php foreach ($arenaSchedule->scheduleList as $schedule): ?>
     <?php
       $dayDate = new DateTime($schedule->day_date);
@@ -41,6 +40,6 @@
     </ul>
   <?php endforeach ?>
 <?php else: ?>
-  <h1><?php $searchArenaName ?></h1>
-  <div>Расписание не найдено</div>
+  <h1><?= $searchArenaName?></h1>
+  <div>Расписание не найдено или каток на этой неделе не работает</div>
 <?php endif ?>
