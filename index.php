@@ -28,20 +28,14 @@ require 'connection/get_schedule.php';
       property="og:image"
       content="/img/socials.png"
     />
-    <meta name="twitter:card" content="summary_large_image" />
     <meta name="og:site_name" content="ЛедоГраф - ваш проводник в мире ледовых приключений" />
     <meta property="og:url" content="https://lingvocards.space" />
+    <meta name="twitter:card" content="summary_large_image" />
 
-    <link rel="stylesheet" href="/styles/var.css" />
-    <link rel="stylesheet" href="/styles/reset.css" />
-    <link rel="stylesheet" href="/styles/bootstrap-reboot.css"/>
-    <link rel="stylesheet" href="/styles/common.css?version=64" />
-    <link rel="stylesheet" href="/styles/burger.css" />
-    <link rel="stylesheet" href="/styles/navigation.css?version=4" />
-    <link rel="stylesheet" href="/styles/time-list.css" />
-    <link rel="stylesheet" href="/styles/components/hero.css?version=4" />
+     <link rel="stylesheet" href="/styles/styles.css">
 
     <script defer src="./js/navigation.js" ></script>
+    <script defer src="./js/schedule-connection.js" ></script>
 
     <title>Расписание катков</title>
   </head>

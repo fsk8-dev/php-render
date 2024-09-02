@@ -1,0 +1,29 @@
+.time-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px var(--padding-basic);
+  margin-bottom: 1rem;
+}
+
+.date-title {
+  margin-bottom: 0.4rem;
+  font-size: calc(1.325rem + 0.2vw);
+}
+
+.no-break-text {
+  white-space: nowrap;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.red {
+  color: var(--color-red);
+}
