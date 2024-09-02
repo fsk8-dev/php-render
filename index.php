@@ -3,13 +3,17 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-require 'connection/get_schedule.php';
+require 'connect/get_schedule.php';
 
   $request_uri = $_SERVER['REQUEST_URI'];
   if ($request_uri == '/') {
     $request_uri = '/main';
+  } elseif (strpos($request_uri, 'ice-rink-schedule') != false) {
+    $request_uri = '/schedule-page-template';
   }
   $requested_file = rtrim($_SERVER['DOCUMENT_ROOT'], '/') . '/pages' . $request_uri . '.' . 'php';
+
+
 ?>
 
 <!DOCTYPE html>

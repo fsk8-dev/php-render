@@ -1,22 +1,10 @@
 <?php
-  $arrayFiltered = array_filter($arenaScheduleList, function ($arena) use ($searchArenaName){
-    return $arena->arenaName === $searchArenaName;
-  });
-
-  $result = array_values($arrayFiltered);
-
-  if(count($arrayFiltered) > 0) {
-    $arenaSchedule = $result[0];
-  } else {
-    $arenaSchedule = null;
-  }
-
   $weekDays = ['', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']
 ?>
 
-<?php if(!is_null($arenaSchedule) && count($arenaSchedule->scheduleList) > 0): ?>
+<?php if(!is_null($location_schedule) && count($location_schedule->scheduleList) > 0): ?>
 
-  <h1><?= $arenaSchedule->arenaName ?></h1>
+  <h1><?= $location_schedule->name ?></h1>
   <?php foreach ($arenaSchedule->scheduleList as $schedule): ?>
     <?php
       $dayDate = new DateTime($schedule->day_date);
