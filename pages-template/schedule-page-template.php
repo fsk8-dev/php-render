@@ -1,6 +1,6 @@
 <?php
 require 'connect/schedule-api-connections.php';
-require 'classes/day-schedule-list-class.php';
+require 'classes/day-schedule-list.php';
 $ICE_RINK_ARENA_TYPE_ID = 1;
 $SKATING_TYPE_SCHEDULE_ID = 1;
 
@@ -89,8 +89,6 @@ function getTimeStamp($date) {
   $timestamp = $timestamp->getTimestamp();
   return $timestamp;
 };
-
-  var_dump($dayScheduleList);
 
 ?>
 
