@@ -7,11 +7,13 @@ require 'connect/get_schedule.php';
 
   $request_uri = $_SERVER['REQUEST_URI'];
   if ($request_uri == '/') {
-    $request_uri = '/main';
+    $request_uri = '/pages/main';
   } elseif (strpos($request_uri, 'ice-rink-schedule') != false) {
-    $request_uri = '/schedule-page-template';
+    $request_uri = '/pages-template/schedule-page-template';
+  } else {
+    $request_uri = '/pages' . $request_uri;
   }
-  $requested_file = rtrim($_SERVER['DOCUMENT_ROOT'], '/') . '/pages' . $request_uri . '.' . 'php';
+  $requested_file = rtrim($_SERVER['DOCUMENT_ROOT'], '/') . $request_uri . '.' . 'php';
 
 
 ?>
