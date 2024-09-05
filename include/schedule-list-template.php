@@ -2,13 +2,13 @@
   $weekDays = ['', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']
 ?>
 
-<?php if(!is_null($location_schedule) && count($location_schedule->scheduleList) > 0): ?>
+<?php if(!is_null($location_schedule) ): ?>
 
   <h1><?= $location_schedule->name ?></h1>
-
-  <?php foreach ($schedule->session as $session): ?>
+<?php # var_dump($dayScheduleList[0]) ?>
+  <?php foreach ($dayScheduleList as $daySchedule): ?>
     <?php
-      $dayDate = new DateTime($session->startDate);
+      $dayDate = $daySchedule->schedule_date;
       $dayOfWeekNumeric = $dayDate->format('N');
       $weekDay = $weekDays[$dayOfWeekNumeric];
       if(in_array($dayOfWeekNumeric, [6, 7])) {
@@ -23,12 +23,13 @@
       <?= $dayDate->format('d.m') ?>
     </h2>
     <ul class="time-list list-reset">
-      <?php foreach ($session->day_time_list as $day_time): ?>
-        <?php $dayTime = new DateTime($day_time) ?>
+      <?php foreach ($daySchedule->session_list as $session): ?>
+        <?php $dayTime = new DateTime($session->startDate) ?>
         <li class="time-list__item"><?= $dayTime->format('H:i') ?></li>
       <?php endforeach ?>
     </ul>
   <?php endforeach ?>
+
 <?php else: ?>
   <h1><?= $searchArenaName?></h1>
   <div>Расписание не найдено или каток на этой неделе не работает</div>

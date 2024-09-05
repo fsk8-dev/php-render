@@ -68,7 +68,7 @@ function getDayScheduleList($session_list) {
         $newList = array_slice($session_list, $iCurrent);
         getDayScheduleList($newList);
     }
-    return $data;
+    return array_slice($data, 0);
 }
 
 function addSession($key, $iCurrent, $originalList ) {
