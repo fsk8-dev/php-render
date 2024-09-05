@@ -1,14 +1,13 @@
 (() => {
   const btnNavOpen = document.getElementById("btn-nav-open");
-  const btnNavClose = document.getElementById("btn-nav-close");
-  const navPanel = document.getElementById("nav-panel");
+  const navPanel = document.getElementById("nav");
   const body = document.getElementById("body");
   const overlay = document.getElementById("overlay");
 
   btnNavOpen.addEventListener("click", () => {
-    navPanel.classList.add("nav__panel--open");
-    body.classList.add("modal-opened");
-    overlay.classList.add("modal-opened");
+    navPanel.classList.toggle("nav--close");
+    body.classList.toggle("modal-opened");
+    overlay.classList.toggle("modal-opened");
     overlay.addEventListener("click", closeNavPanel);
   });
 

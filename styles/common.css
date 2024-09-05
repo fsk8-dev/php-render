@@ -25,12 +25,13 @@ body {
 }
 
 .container {
+  position: relative;
   margin: 0 auto;
-  padding: 0 var(--padding-basic);
+  /* padding: 0 var(--padding-basic); */
   max-width: var(--medium-screen);
   min-height: 100vh;
   overflow: hidden;
-  box-shadow: 0 0 15px 5px #eaeaea;
+  /* box-shadow: 0 0 15px 5px #eaeaea; */
 }
 
 @media (min-width: var(--medium-screen)) {
@@ -44,10 +45,6 @@ body {
   grid-template-rows: auto 1fr auto;
   row-gap: 20px;
   min-height: 100vh;
-}
-
-.header {
-  padding: var(--padding-basic) 0;
 }
 
 .footer {
@@ -91,4 +88,8 @@ body {
   border-radius: 10px;
   box-shadow: 1px 1px 3px 1px #eaeaea;
   width: 100%;
+}
+
+.box-shadow {
+  box-shadow: 1px 1px 3px 1px #eaeaea;
 }

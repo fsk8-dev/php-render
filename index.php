@@ -38,7 +38,7 @@ require 'connect/get_schedule.php';
     <meta property="og:url" content="https://lingvocards.space" />
     <meta name="twitter:card" content="summary_large_image" />
 
-     <link rel="stylesheet" href="/styles/styles.css">
+     <link rel="stylesheet" href="/styles/styles.css?<?= time() ?>">
 
     <script defer src="./js/navigation.js" ></script>
     <script defer src="./js/schedule-connection.js" ></script>
@@ -48,8 +48,9 @@ require 'connect/get_schedule.php';
   <body id="body">
     <div class="container">
       <div class="overlay" id="overlay"></div>
+      <?php include 'include/header/header.php';?>
+      <?php include 'include/navigation/navigation.php';?>
       <div class="grid">
-        <?php include 'include/header/header.php';?>
         <main>
           <?php
             if(file_exists($requested_file)) {

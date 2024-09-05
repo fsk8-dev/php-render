@@ -12,6 +12,8 @@
 @import "./common.css";
 
 /* components */
+@import "./components/header.css";
 @import "./components/hero.css";
 @import "./components/burger.css";
 @import "./components/navigation.css";
+@import "./components/navigation-v2.css";

@@ -1,0 +1,26 @@
+/* TODO поставить background */
+
+.header {
+  position: fixed;
+  padding: 10px;
+  margin-bottom: 5px;
+  width: 100%;
+  max-width: var(--medium-screen);
+  background-color: #fff;
+  z-index: 1000;
+}
+
+.header__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 60px;
+  border-radius: 10px;
+}
+
+.header__title {
+  color: var(--color-primary-shade);
+  font-size: 40px;
+  filter: drop-shadow(1px 1px 1px var(--color-primary));
+}
