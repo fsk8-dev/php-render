@@ -50,18 +50,16 @@ require 'connect/get_schedule.php';
       <div class="overlay" id="overlay"></div>
       <?php include 'include/header/header.php';?>
       <?php include 'include/navigation/navigation.php';?>
-      <div class="grid">
-        <main>
-          <?php
-            if(file_exists($requested_file)) {
-              include $requested_file;
-            } else {
-              include 'pages/not-found.php';
-            }
-          ?>
-        </main>
-        <?php include 'include/footer/footer.php';?>
-      </div>
+      <main class="main">
+        <?php
+          if(file_exists($requested_file)) {
+            include $requested_file;
+          } else {
+            include 'pages/not-found.php';
+          }
+        ?>
+      </main>
+      <?php include 'include/footer/footer.php';?>
     </div>
   </body>
 </html>

@@ -1,11 +1,13 @@
 <section class="hero">
+  <h1 class="hero__title">Расписание&nbsp;катков
+    <!-- <span class="no-break-text">Санкт-Петербурга</span> -->
+  </h1>
   <div class="hero__content">
-    <h1 class="hero__title">Расписание&nbsp;катков <span class="no-break-text">Санкт-Петербурга</span></h1>
-    <p class="hero__text">
+  <p class="hero__text">
       Здесь ты найдешь все расписания ледовых площадок, чтобы погрузиться в атмосферу настоящих ледовых приключений.
     </p>
   </div>
-  <img class="img hero__img" src="/img/todes.png" alt="Тодес">
+    <img class="img hero__img" src="/img/todes.png" alt="Тодес">
   <div class="hero__overlay"></div>
 </section>
 

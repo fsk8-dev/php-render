@@ -27,3 +27,7 @@
 .red {
   color: var(--color-red);
 }
+
+.box-shadow {
+  box-shadow: 1px 1px 3px 1px #eaeaea;
+}
