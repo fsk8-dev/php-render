@@ -105,9 +105,10 @@ body.modal-opened {
   gap: 15px;
 }
 
-@media (min-width: calc(var(--medium-screen) + 1px)) {
+/* NOTE вернуть когда навигацию верну */
+/* @media (min-width: 992px) {
   .main {
     margin-top: 150px;
     padding-inline: 10px;
   }
-}
+} */

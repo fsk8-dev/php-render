@@ -3,6 +3,12 @@
   display: block;
 }
 
+@media (min-width: 992px) {
+  .burger {
+    display: none;
+  }
+}
+
 .burger__btn {
   position: relative;
   width: 40px;

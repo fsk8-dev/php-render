@@ -1,9 +1,9 @@
 <nav class="nav nav--close" id="nav">
 <div class="nav__body box-shadow">
-    <h3 className="nav__title">Меню</h3>
+    <h3 class="nav__title">Меню</h3>
     <ul class="nav__list list-reset">
      <li class="nav__item">
-         <a href="/" class="nav__link">
+         <a href="/" class="nav__link link-reset">
            Главная
          </a>
        </li>

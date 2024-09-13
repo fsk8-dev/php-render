@@ -37,8 +37,9 @@
   /*  TODO hover styles */
 }
 
-@media (min-width: calc(var(--medium-screen) + 1px)) {
-  .mainMenu {
+@media (min-width: 992px) {
+  .nav {
+    display: none;
     position: fixed;
     top: 60px;
     padding-top: 20px;
@@ -46,32 +47,32 @@
     background-color: transparent;
   }
 
-  .body {
+  .nav__body {
     padding: 0;
-    box-shadow: 1px 1px 3px 1px var(--color-primary_light);
-    border: none;
-    border-radius: 0;
-    background-color: var(--color-primary_light);
+    /* box-shadow: 1px 1px 3px 1px var(--color-primary-light); */
+    /* border: none; */
+    /* border-radius: 0; */
+    background-color: #fff;
   }
 
-  .list {
+  .nav__list {
     flex-direction: row;
   }
 
-  .link {
+  .nav__link {
     padding: 10px 15px;
-
-    &:hover {
-      color: #fff;
-      background-color: var(color-primary-shade);
-    }
   }
 
-  .close {
+  .nav__link:hover {
+    color: #fff;
+    background-color: var(--color-primary-shade);
+  }
+
+  .nav--close {
     transform: none;
   }
 
-  .title {
+  .nav__title {
     display: none;
   }
 }
