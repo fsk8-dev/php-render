@@ -1,16 +1,20 @@
 <?php
 require 'connect/schedule-api-connections.php';
 require 'classes/day-schedule-list.php';
+
 $ICE_RINK_ARENA_TYPE_ID = 1;
 $SKATING_TYPE_SCHEDULE_ID = 1;
 
 $uri = $_SERVER['REQUEST_URI'];
 $uri_list = explode('/', $uri);
-$location_index = $uri_list[count($uri_list) - 1];
 
-$location_schedule = getLocationSchedule($location_index);
-$session_list = getSessionList($location_schedule);
-$dayScheduleList = getDayScheduleList($session_list);
+if ($uri_list) {
+  $location_index = $uri_list[count($uri_list) - 1];
+
+  $location_schedule = getLocationSchedule($location_index);
+  $session_list = getSessionList($location_schedule);
+  $dayScheduleList = getDayScheduleList($session_list);
+  }
 
 function getSessionList($location_schedule) {
   global $ICE_RINK_ARENA_TYPE_ID;
@@ -25,10 +29,11 @@ function getSessionList($location_schedule) {
   $schedule_list = array_filter($schedule_list, function ($schedule) use ($SKATING_TYPE_SCHEDULE_ID) {
     return $schedule->scheduleTypeId == $SKATING_TYPE_SCHEDULE_ID;
   });
+
   $session_list = $schedule_list[0]->session;
 
   return $session_list;
-}
+  }
 
 // NOTE попробовал сделать поиск по алгоритму "разделяй и властвуй"
 $data = array(); // Инициализация как пустой массив
@@ -37,7 +42,7 @@ function getDayScheduleList($session_list) {
     global $data;
 
     if (count($session_list) == 0) {
-        return $data;
+        return array();
     } else {
         $day_date = new DateTime($session_list[0]->startDate);
         $timestamp = getTimeStamp($day_date);

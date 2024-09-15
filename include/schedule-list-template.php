@@ -1,11 +1,19 @@
 <?php
-  $weekDays = ['', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']
+  $weekDays = ['', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
+
+  if (!is_null($location_schedule)) {
+    $arenaName = $location_schedule->name;
+  } else {
+    $arenaName = '';
+  }
+
 ?>
 
-<?php if(!is_null($location_schedule) ): ?>
 
-  <h1><?= $location_schedule->name ?></h1>
-<?php # var_dump($dayScheduleList[0]) ?>
+<h1><?= $arenaName ?></h1>
+
+
+<?php if (count($dayScheduleList) > 0) :?>
   <?php foreach ($dayScheduleList as $daySchedule): ?>
     <?php
       $dayDate = $daySchedule->schedule_date;
@@ -29,8 +37,6 @@
       <?php endforeach ?>
     </ul>
   <?php endforeach ?>
-
 <?php else: ?>
-  <h1><?= $searchArenaName?></h1>
   <div>Расписание не найдено или каток на этой неделе не работает</div>
 <?php endif ?>
