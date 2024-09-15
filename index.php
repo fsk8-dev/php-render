@@ -3,7 +3,7 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-require 'connect/get_schedule.php';
+  require 'connect/schedule-api-connections.php';
 
   $request_uri = $_SERVER['REQUEST_URI'];
   if ($request_uri == '/') {
@@ -14,7 +14,7 @@ require 'connect/get_schedule.php';
     $request_uri = '/pages' . $request_uri;
   }
   $requested_file = rtrim($_SERVER['DOCUMENT_ROOT'], '/') . $request_uri . '.' . 'php';
-
+  $location_list = getLocationList();
 
 ?>
 
@@ -35,13 +35,12 @@ require 'connect/get_schedule.php';
       content="/img/socials.png"
     />
     <meta name="og:site_name" content="ЛедоГраф - ваш проводник в мире ледовых приключений" />
-    <meta property="og:url" content="https://lingvocards.space" />
+    <meta property="og:url" content="https://schedule.fsk8.ru/" />
     <meta name="twitter:card" content="summary_large_image" />
 
-     <link rel="stylesheet" href="/styles/styles.css?<?= time() ?>">
+    <link rel="stylesheet" href="/styles/styles.css?<?= time() ?>">
 
-    <script defer src="./js/navigation.js" ></script>
-    <script defer src="./js/schedule-connection.js" ></script>
+    <script defer src="/js/navigation.js"></script>
 
     <title>Расписание катков</title>
   </head>

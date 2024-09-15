@@ -34,7 +34,16 @@
 .nav__link {
   display: block;
   padding-block: 3px;
-  /*  TODO hover styles */
+}
+
+.nav__link:hover,
+.nav__link:active {
+  color: var(--color-primary);
+}
+
+.nav__link:focus-visible {
+  border-radius: 5px;
+  box-shadow: 0 0 0 3px #fff, 0 0 4px 4px var(--color-primary);
 }
 
 @media (min-width: 992px) {

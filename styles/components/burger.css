@@ -10,13 +10,17 @@
 }
 
 .burger__btn {
-  position: relative;
-  width: 40px;
-  height: 23px;
+  padding: 5px;
+  border: 1px solid transparent;
 }
 
 .burger__btn:hover .burger__line {
   background-color: var(--color-primary-shade);
+}
+.burger__wrap-lines {
+  position: relative;
+  width: 40px;
+  height: 23px;
 }
 
 .burger__line {

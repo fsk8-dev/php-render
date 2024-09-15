@@ -1,5 +1,4 @@
 <?php
-require 'connect/schedule-api-connections.php';
 require 'classes/day-schedule-list.php';
 
 $ICE_RINK_ARENA_TYPE_ID = 1;

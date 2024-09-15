@@ -20,7 +20,7 @@
     <p>
       Держите руку на пульсе расписания сеансов массовых катаний катков города. Будьте в курсе последних изменений
     </p>
-    <a class="link-reset btn" href="/location-list">Перейти</a>
+    <a class="link-reset btn focus-visible" href="/location-list">Перейти</a>
   </div>
 </article>
 

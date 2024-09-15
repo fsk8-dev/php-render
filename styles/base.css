@@ -38,9 +38,9 @@ body.modal-opened {
 
 .grid {
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: 1fr auto;
   row-gap: 20px;
-  min-height: calc(100vh - 60px);
+  min-height: 100vh;
 }
 
 .footer {
@@ -81,12 +81,28 @@ body.modal-opened {
 .btn {
   display: inline-block;
   padding: 0.5rem 1rem;
-  /* background-color: var(--color-secondary); */
   min-width: 150px;
   text-align: center;
   border: 2px solid var(--color-primary);
   border-radius: 10px;
   color: var(--color-primary);
+}
+
+.btn:hover,
+.btn:active {
+  color: #fff;
+  background-color: var(--color-primary);
+}
+
+/**
+ставя класс focus-visible удостоверься, что у элемента присутствуют следующие стили:
+  padding: 5px;
+  border: 1px solid transparent;
+*/
+.focus-visible:focus-visible {
+  border: 1px solid var(--color-primary);
+  border-radius: 5px;
+  box-shadow: 0 0 0 2px #fff, 0 0 4px 4px var(--color-primary);
 }
 
 .btn-card {
