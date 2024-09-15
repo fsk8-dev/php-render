@@ -1,0 +1,13 @@
+.card {
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.card__body {
+  min-height: 100px;
+}
+
+.card__title {
+  font-size: 1.2rem;
+}

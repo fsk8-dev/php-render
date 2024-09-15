@@ -1,0 +1,23 @@
+/* reset */
+@import "./assets/bootstrap-reboot.css";
+
+/* var */
+@import "./var.css";
+
+/* utils */
+@import "./utils/reset.css";
+@import "./utils/utils.css";
+
+/* common */
+/* NOTE если в течение месяца (сегодня: 16.09.2024) не будет проблем - удалить этот файл */
+/* @import "./common.css"; */
+@import "./base.css";
+
+/* components */
+@import "./components/header.css";
+@import "./components/hero.css";
+@import "./components/burger.css";
+/* NOTE если в течение месяца (сегодня: 16.09.2024) не будет проблем - удалить этот файл */
+/* @import "./components/navigation.css"; */
+@import "./components/navigation-v2.css";
+@import "./components/card.css";
