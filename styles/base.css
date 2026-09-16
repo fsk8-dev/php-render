@@ -51,6 +51,12 @@ body.modal-opened {
   color: #fff;
 }
 
+@media (max-width: 991px) {
+  .footer {
+    margin-inline: 0;
+  }
+}
+
 .img {
   max-width: 100%;
 }
@@ -111,8 +117,18 @@ body.modal-opened {
   border: 1px solid #f5f5f5;
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 1px 1px 3px 1px #eaeaea;
+  box-shadow: 1px 1px 1px 0 #eaeaea;
   width: 100%;
+
+  transition: background-color 0.2s ease-out;
+}
+
+.btn-card:hover {
+  background-color: color-mix(in srgb, var(--color-primary-light) 10%, transparent);
+}
+
+.btn-card:active {
+  background-color: color-mix(in srgb, var(--color-primary-light) 20%, transparent);
 }
 
 .list {
