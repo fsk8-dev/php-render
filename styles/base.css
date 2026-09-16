@@ -51,6 +51,12 @@ body.modal-opened {
   color: #fff;
 }
 
+@media (max-width: 991px) {
+  .footer {
+    margin-inline: 0;
+  }
+}
+
 .img {
   max-width: 100%;
 }
